@@ -14,6 +14,8 @@ import {
 import Formulario from './src/components/Formulario';
 import Paciente from './src/components/Paciente';
 
+// agrego este comentario solo para crear un nuevo commit
+//no se por que no funciona el git push
 
 
 
@@ -21,17 +23,19 @@ const App = () => {
   //Los hooks se colocan en la parte superior del componente, no pueden ser registrados de forma condicional, nunca despues de un return
   const [modalVisible, setModalVisble] = useState([false])  //useState es un hook
   const [pacientes, setPacientes] = useState([])
+  console.log('pacientes', pacientes);
 
 
   return (//View se utiliza para poder tener varios elementos text
     <View styles={styles.container}> 
-      <Text style={styles.titulo}>Administrador de citasx {''}
+      <Text style={styles.titulo}>Administrador de citass {''}
       <Text style={styles.tituloBold}>Veterinaria</Text>
       </Text>
 
     <Pressable
       style={styles.btnNuevaCita}
-      onPress ={()=> setModalVisble(!modalVisible)}   
+      onPress ={()=> setModalVisble(!modalVisible)} 
+      
     >
       <Text
       style={styles.btnTextoNuevaCita}>
